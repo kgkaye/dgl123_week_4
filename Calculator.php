@@ -15,7 +15,7 @@
 <body>
     <h1>Addition Only Calculator</h1>
 
-    <form >
+    <form action="calculator.php" metohod="get">
         <div>
             <label for="first_number">1st Number</label>
             <input type="number" name="first_number" value="0"> <!--Adds numeric value to first_number-->
