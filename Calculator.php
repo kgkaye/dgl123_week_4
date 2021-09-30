@@ -13,6 +13,8 @@
     
 </head>
 <body>
+    <!--This simple calulator takes two user inputted numbers through a form,
+    adds them together and displays the results upon form submition.-->
     <h1>Addition Only Calculator</h1>
 
     <form action="calculator.php" metohod="get">
@@ -23,16 +25,19 @@
         <br>
         <div>
             <label for="second_number">2nd Number</label>
-            <input type="number" name="second_number" value="0">
+            <input type="number" name="second_number" value="0"><!--Adds numeric value to first_number-->
+        </div>
         </div>
         <br>
         <input type="submit" value="Calculate Sum">
     </form>
     <br>
     <?php  
-        $first_number = $_GET['first_number'] ?? '0';
+        //once the form is submitted $_GET retrieves the variable values
+        $first_number = $_GET['first_number'] ?? '0';//?? sets array index to 0 before form is submitted
         $second_number = $_GET['second_number'] ?? '0';
         $total = $first_number + $second_number;
+        
         //if first_number and second_number have a value echo out results
         if (isset ($_GET['first_number'], $_GET['second_number'])) {
             echo "<h2>Result:</h2>
